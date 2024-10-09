@@ -17,7 +17,8 @@ const PORT = process.env.PORT || 3000; // Vercel uses 3000 by default
 // }))
 // const PORT = 3030
 app.use(cors({
-    origin: true
+    origin: true,
+    credentials:true
 }))
 
 // process.env.JWT_SECRECT
@@ -479,6 +480,10 @@ app.get('/api/profile/:username', async (req, res) => {
 //         res.status(500).json({error:"error while executing code"})
 //     }
 // });
+
+app.listen(process.env.PORT, 
+    console.log(`sever is running on port ${process.env.PORT}`)
+)
 
 
 app.get('/api/test', (req, res) => {
