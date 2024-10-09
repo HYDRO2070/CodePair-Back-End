@@ -34,8 +34,13 @@ mongoose.connect(process.env.MONGO_URI, {
 const Problem = mongoose.model('Problem', new mongoose.Schema({}, { collection: 'problems' }));
 
 
-app.get('/api/', (req, res) => {
-    res.send('Welcome to the API');
+app.get('/api', (req, res) => {
+    try {
+        res.status(200).json({mesaage:"hello world');
+    } catch (error) {
+        console.error('Error in /api/example:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
 });
 
 app.post('/api/signup', async (req, res) => {
