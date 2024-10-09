@@ -481,4 +481,4 @@ app.get('/test', (req, res) => {
     res.json({ message: "This text is from Backeden!" })
 })
 
-export default app;
+module.exports = app;
