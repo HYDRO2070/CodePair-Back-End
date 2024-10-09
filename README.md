@@ -24,8 +24,8 @@ To get started with CodePair, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/codepair.git
-    cd codepair
+    git clone https://github.com/HYDRO2070/CodePair-Back-End.git
+    cd CodePair-Back-End
     ```
 
 2. Install the dependencies:
