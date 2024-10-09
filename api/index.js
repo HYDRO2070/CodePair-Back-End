@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to the API');
 });
 
-app.post('/signup', async (req, res) => {
+app.post('/api/signup', async (req, res) => {
     try {
         const { username, email, password } = req.body;
         const euser = await User.findOne({ email });
@@ -64,7 +64,7 @@ app.post('/signup', async (req, res) => {
 })
 
 
-app.post('/login', async (req, res) => {
+app.post('/api/login', async (req, res) => {
     console.log(req.body)
     const { email, password } = req.body;
     try {
@@ -121,7 +121,7 @@ app.get('/mainpage', authMiddleware, (req, res) => {
 });
 
 
-app.get('/problemset', async (req, res) => {
+app.get('/api/problemset', async (req, res) => {
     try {
         const problem = await Problem.find({});
         // console.log(problem)
@@ -135,7 +135,7 @@ app.get('/problemset', async (req, res) => {
     }
 })
 
-app.get('/problem/:id', async (req, res) => {
+app.get('/api/problem/:id', async (req, res) => {
     const proId = req.params.id;
     try {
         const problem = await Problem.findById(proId);
@@ -152,7 +152,7 @@ app.get('/problem/:id', async (req, res) => {
 })
 
 
-app.post('/run-code', async (req, res) => {
+app.post('/api/run-code', async (req, res) => {
     const { code, language, bottom, test_case } = req.body;
     const top = '#include<bits/stdc++.h>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\n';
     let edit_bottom = bottom
@@ -267,7 +267,7 @@ async function checkSubmission(token) {
 
 
 
-app.use('/submission', async (req, res) => {
+app.use('/api/submission', async (req, res) => {
     // const { code, language, bottom, test_case } = req.body;
     // const temp = {
     //     nums = [1,2,3,4],target =9
@@ -362,7 +362,7 @@ app.use('/submission', async (req, res) => {
 })
 
 
-app.post('/saveproblem', async (req, res) => {
+app.post('/api/saveproblem', async (req, res) => {
     const { username, problemTitle, difficulty } = req.body;
 
     if (!username || !problemTitle || !difficulty) {
@@ -404,7 +404,7 @@ app.post('/saveproblem', async (req, res) => {
 
 
 
-app.get('/profile/:username', async (req, res) => {
+app.get('/api/profile/:username', async (req, res) => {
     const { username } = req.params;
 
     try {
@@ -476,7 +476,7 @@ app.get('/profile/:username', async (req, res) => {
 // });
 
 
-app.get('/test', (req, res) => {
+app.get('/api/test', (req, res) => {
     res.json({ message: "This text is from Backeden!" })
 })
 
