@@ -35,6 +35,10 @@ mongoose.connect(process.env.MONGO_URI, {
 const Problem = mongoose.model('Problem', new mongoose.Schema({}, { collection: 'problems' }));
 
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the API');
+});
+
 app.post('/signup', async (req, res) => {
     try {
         const { username, email, password } = req.body;
