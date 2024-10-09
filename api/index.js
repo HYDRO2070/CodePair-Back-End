@@ -36,7 +36,7 @@ const Problem = mongoose.model('Problem', new mongoose.Schema({}, { collection: 
 
 app.get('/', (req, res) => {
     try {
-        res.status(200).json({mesaage:"hello world');
+        res.status(200).json({mesaage:"hello world"});
     } catch (error) {
         console.error('Error in /api/example:', error);
         res.status(500).json({ message: 'Internal Server Error' });
