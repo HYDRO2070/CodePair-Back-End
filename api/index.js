@@ -1,5 +1,3 @@
- // mongodb+srv://s9098544118:Xrj9wlCgrqQykuUh@codepairdb.jxdm1.mongodb.net/CodePairDB?retryWrites=true&w=majority&appName=CodePairDB
-
 require('dotenv').config();
 
 const express = require("express")
