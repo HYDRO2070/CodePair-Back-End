@@ -34,7 +34,7 @@ mongoose.connect(process.env.MONGO_URI, {
 const Problem = mongoose.model('Problem', new mongoose.Schema({}, { collection: 'problems' }));
 
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     try {
         res.status(200).json({mesaage:"hello world');
     } catch (error) {
