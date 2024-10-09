@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js", 
-    "start": "vercel dev"
+     "start": "node api/index.js"
   },
   "keywords": [],
   "author": "",
