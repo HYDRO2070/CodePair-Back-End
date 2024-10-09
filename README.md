@@ -12,7 +12,7 @@ Welcome to **CodePair**, your go-to platform for honing your Data Structures and
 
 ## Technology Stack
 
-- **Frontend**: (Mention any technologies/frameworks used)
+- **Frontend**: React
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT)
