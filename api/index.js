@@ -16,6 +16,9 @@ const PORT = process.env.PORT || 3000; // Vercel uses 3000 by default
 //     origin: 'http://localhost:3000'
 // }))
 // const PORT = 3030
+app.use(cors({
+    origin: true
+}))
 
 // process.env.JWT_SECRECT
 
