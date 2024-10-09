@@ -20,10 +20,9 @@ const PORT = process.env.PORT || 3000; // Vercel uses 3000 by default
 // process.env.JWT_SECRECT
 
 mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlparser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
-
-})
+});
     .then(() => {
         console.log("MongoDb connected .....");
     })
